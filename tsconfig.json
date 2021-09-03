@@ -1,0 +1,5 @@
+{
+    "extends": "assemblyscript/std/assembly.json",
+    "exclude": ["node_modules/"],
+    "include": ["src/"]
+}

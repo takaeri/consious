@@ -1,0 +1,20 @@
+{
+  "name": "consious",
+  "version": "1.0.0",
+  "description": "🎮 A game written in AssemblyScript for the WASM-4 console",
+  "scripts": {
+    "build": "npx asc --target release",
+    "debug": "npx asc --target debug --textFile build/main.wat",
+    "lint": "npx eslint && npx prettier --write .",
+    "dev": "npm run debug && npx w4 run build/main.wasm",
+    "bundle": "node prod.js && npm run build && npx w4 bundle build/main.wasm --html dist/index.html"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "assemblyscript": "^0.19.5",
+    "eslint": "^7.32.0",
+    "prettier": "^2.3.2",
+    "wasm4": "^1.0.3"
+  }
+}
